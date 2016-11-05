@@ -16,7 +16,7 @@ function verify(credentials) {
     const requestOptions = {
         uri: 'https://petstore-popeye.elastic.io/v2/user/me',
         headers: {
-            'api_key': apiKey
+            'api-key': apiKey
         },
         json: true
     };
