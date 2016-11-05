@@ -53,6 +53,21 @@
             "metadata": {
                 "out": "./lib/schemas/getPetsByStatus.out.json"
             }
+        },
+        "getPetsByStatusWithDynamicSelectModel": {
+            "main": "./lib/triggers/getPetsByStatusWithDynamicSelectModel.js",
+            "type": "polling",
+            "title": "Get Pets By Status With Dynamic Select Model",
+            "fields": {
+                "status": {
+                    "label": "Pet Status",
+                    "required": true,
+                    "viewClass": "SelectView",
+                    "model": "getStatusModel",
+                    "prompt":"Select Pet Status"
+                }
+            },
+            "dynamicMetadata": true
         }
     }
 }
