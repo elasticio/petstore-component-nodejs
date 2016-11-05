@@ -67,7 +67,9 @@
                     "prompt":"Select Pet Status"
                 }
             },
-            "dynamicMetadata": true
+            "metadata": {
+                "out": "./lib/schemas/getPetsByStatus.out.json"
+            }
         }
     }
 }
