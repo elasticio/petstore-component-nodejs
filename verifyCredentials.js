@@ -22,7 +22,7 @@ function verify(credentials) {
 
     // sending a request to the most simple endpoint of the target API
     const requestOptions = {
-        uri: 'https://petstore-popeye.elastic.io/v2/user/me',
+        uri: 'https://petstore.elastic.io/v2/user/me',
         headers: {
             'api-key': apiKey
         },
