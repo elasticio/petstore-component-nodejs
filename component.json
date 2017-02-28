@@ -7,7 +7,8 @@
       "apiKey": {
         "label": "API key",
         "required": true,
-        "viewClass": "TextFieldView"
+        "viewClass": "TextFieldWithNoteView",
+        "note": "Please API key <b>elasticio</b>. For more details see <a href='https://petstore.elastic.io/docs/' target='_blank'>Petstore API docs</a>."
       }
     }
   },
