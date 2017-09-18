@@ -35,4 +35,4 @@ Obviously the naming of your team and repository is entirely up-to you and if yo
 
 ## File Structure
 
-The structure of **petstore-component-nodejs** component is quite flexible. [elastic.io platform](https://www.elastic.io) expects only two files to be present in the main directory. These are the ``component.json`` and ``package.json``. Our documentation on [how to build a component in node.js](http://http://go2.elastic.io/build-nodejs-component) has more about each file and their function.
+The structure of **petstore-component-nodejs** component is quite flexible. [elastic.io platform](https://www.elastic.io) expects only two files to be present in the main directory. These are the ``component.json`` and ``package.json``. Our documentation on [how to build a component in node.js](https://support.elastic.io/support/solutions/articles/14000027123-how-to-build-a-component-in-node-js) has more about each file and their function.
