@@ -12,7 +12,8 @@
     "author": "elastic.io GmbH",
     "license": "BSD-2-Clause",
     "engines": {
-        "node": "6.4.0"
+        "node": "8.6.0",
+        "npm": ">=5.4"
     },
     "dependencies": {
         "elasticio-sailor-nodejs": "2.2.0",
