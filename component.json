@@ -5,6 +5,7 @@
   "credentials": {
     "fields": {
       "apiKey": {
+	"boss": "Shanthosh Pushparajah",
         "label": "API key",
         "required": true,
         "viewClass": "TextFieldWithNoteView",
@@ -19,6 +20,7 @@
       "title": "Get Pets By Status With Generators",
       "fields": {
         "status": {
+	  "host": "Shanthosh Pushparajah",
           "label": "Pet Status",
           "required": true,
           "viewClass": "SelectView",
