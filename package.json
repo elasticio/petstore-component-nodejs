@@ -1,25 +1,30 @@
 {
-    "name": "@elasticio/petstore-component-nodejs",
-    "version": "0.0.1",
-    "description": "elastic.io component for the Petstore API",
-    "scripts": {
-        "test": "exit 0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:elasticio/petstore-component-nodejs.git"
-    },
-    "author": "elastic.io GmbH",
-    "license": "BSD-2-Clause",
-    "engines": {
-        "node": "8.6.0",
-        "npm": ">=5.4"
-    },
-    "dependencies": {
-        "elasticio-sailor-nodejs": "2.2.1",
-        "elasticio-node": "0.0.8",
-        "co": "4.6.0",
-        "request": "2.76.0",
-        "request-promise": "4.1.1"
-    }
+  "name": "webhook",
+  "version": "1.1.0",
+  "description": "elastic.io webhook component",
+  "scripts": {
+    "pretest": "eslint spec lib verifyCredentials.js --fix && npm audit fix",
+    "test": "mocha spec --recursive"
+  },
+  "engines": {
+    "node": "6.4.0"
+  },
+  "author": "elastic.io GmbH",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "debug": "3.1.0",
+    "elasticio-node": "0.0.9",
+    "elasticio-sailor-nodejs": "2.4.2",
+    "node-uuid": "1.4.8",
+    "q": "1.5.1",
+    "request": "2.83.x"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "5.16.0",
+    "eslint-plugin-mocha": "5.3.0",
+    "mocha": "6.1.4",
+    "nock": "10.0.6",
+    "sinon": "7.3.2"
+  }
 }
