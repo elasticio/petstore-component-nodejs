@@ -1,67 +1,94 @@
 {
-    "title": "Webhook",
-    "description": "Webhooks allow you to collect information about events as they happen in near real-time. Provide a URL, select when and where you want that URL to receive data about events on your list, and we'll send it to you as the events take place.  It is recommended that you specify a URL using https.",
-    "service": "webhook",
-    "docsUrl":"https://github.com/elasticio/webhook-component",
-    "credentials": {
-        "fields": {
-            "auth": {
-                "required": false,
-                "viewClass": "WebhookAuthView"
-            }
-        }
-    },
-    "triggers": {
-        "receive": {
-            "title": "Receive",
-            "description": "Receive trigger has 3 fields:  the WebHook URL to send your data, HMAC to secure your WebHook and sample data field to define your incoming message.",
-            "main": "./lib/triggers/receive.js",
-            "fields": {
-              "payload": {
-                "viewClass": "WebHookPayloadView",
-                "label": "Sample data",
-                "required": true,
-                "placeholder": "{ \"foo\" : \"bar\" }"
-              }
-            },
-            "metadata": {
-                "out": {}
-            }
-        }
-    },
-    "actions": {
-        "post": {
-            "title": "Send data",
-            "main": "./lib/actions/send.js",
-            "fields": {
-                "method": {
-                    "viewClass": "SelectView",
-                    "label": "HTTP Verb",
-                    "prompt": "Please select",
-                    "required": true,
-                    "model": {
-                        "POST": "POST",
-                        "PUT": "PUT"
-                    }
-                },
-                "uri": {
-                    "viewClass": "TextFieldView",
-                    "label": "URI",
-                    "required": true
-                },
-                "secret": {
-                    "viewClass": "TextFieldView",
-                    "label": "Secret",
-                    "required": false
-                },
-                "outputSample":{
-                    "viewClass":"OutMetadataView",
-                    "label":"Output JSON Sample",
-                    "required":true,
-                    "default" : "{ \"response\": \"ok\" }",
-                    "placeholder" : "{ \"message\" : \"hello world\" }"
-                }
-            }
-        }
+  "title": "Petstore API (Node.js)",
+  "description": "elastic.io component for the Petstore API",
+  "docsUrl": "https://github.com/elasticio/petstore-component-nodejs",
+  "credentials": {
+    "fields": {
+      "apiKey": {
+        "label": "API key",
+        "required": true,
+        "viewClass": "TextFieldWithNoteView",
+        "note": "Please use <b>elasticio</b> as API key. For more details see <a href='https://petstore.elastic.io/docs/' target='_blank'>Petstore API docs</a>."
+      }
     }
+  },
+  "triggers": {
+    "getPetsByStatusWithGenerators": {
+      "main": "./lib/triggers/getPetsByStatusWithGenerators.js",
+      "type": "polling",
+      "title": "Get Pets By Status With Generators",
+      "fields": {
+        "status": {
+          "label": "Pet Status",
+          "required": true,
+          "viewClass": "SelectView",
+          "model": {
+            "available": "Available",
+            "pending": "Pending",
+            "sold": "Sold"
+          },
+          "prompt": "Select Pet Status"
+        }
+      },
+      "metadata": {
+        "out": "./lib/schemas/getPetsByStatus.out.json"
+      }
+    },
+    "getPetsByStatusWithPromises": {
+      "main": "./lib/triggers/getPetsByStatusWithPromises.js",
+      "type": "polling",
+      "title": "Get Pets By Status With Promises",
+      "fields": {
+        "status": {
+          "label": "Pet Status",
+          "required": true,
+          "viewClass": "SelectView",
+          "model": {
+            "available": "Available",
+            "pending": "Pending",
+            "sold": "Sold"
+          },
+          "prompt": "Select Pet Status"
+        }
+      },
+      "metadata": {
+        "out": "./lib/schemas/getPetsByStatus.out.json"
+      }
+    },
+    "getPetsByStatusWithDynamicSelectModel": {
+      "main": "./lib/triggers/getPetsByStatusWithDynamicSelectModel.js",
+      "type": "polling",
+      "title": "Get Pets By Status With Dynamic Select Model",
+      "fields": {
+        "status": {
+          "label": "Pet Status",
+          "required": true,
+          "viewClass": "SelectView",
+          "model": "getStatusModel",
+          "prompt": "Select Pet Status"
+        }
+      },
+      "metadata": {
+        "out": "./lib/schemas/getPetsByStatus.out.json"
+      }
+    }
+  },
+  "actions": {
+    "createPetWithPromise": {
+      "main": "./lib/actions/createPetWithPromise.js",
+      "title": "Create a Pet With Promise",
+      "metadata": {
+        "in": "./lib/schemas/createPet.in.json",
+        "out": "./lib/schemas/createPet.out.json"
+      }
+    },
+    "createPetWithGenerators": {
+      "main": "./lib/actions/createPetWithGenerators.js",
+      "title": "Create a Pet With Generators",
+      "metadata": {
+        "in": "./lib/schemas/createPet.in.json",
+        "out": "./lib/schemas/createPet.out.json"
+      }
+    }
+  }
 }

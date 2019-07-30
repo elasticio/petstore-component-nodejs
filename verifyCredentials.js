@@ -1,32 +1,34 @@
-'use strict';
+"use strict";
+const request = require('request-promise');
+
+module.exports = verify;
 
 /**
- * Executes the verification logic by checking that fields are not empty using the provided apiKey.
+ * Executes the verification logic by sending a simple to the Petstore API using the provided apiKey.
+ * If the request succeeds, we can assume that the apiKey is valid. Otherwise it is not valid.
  *
  * @param credentials object to retrieve apiKey from
  *
- * @returns Promise which resolves true
+ * @returns Promise sending HTTP request and resolving its response
  */
+function verify(credentials) {
 
-const authTypes = {
-    BASIC: 'BASIC'
-};
+    // access the value of the apiKey field defined in credentials section of component.json
+    const apiKey = credentials.apiKey;
 
-module.exports = function verify(credentials) {
-    // access the value of the auth field defined in credentials section of component.json
-    const { type, basic = {} } = credentials.auth;
-
-    if (type === authTypes.BASIC) {
-        if (!basic.username) {
-            this.logger.debug('Error: Username is required for basic auth');
-            throw new Error('Username is required for basic auth');
-        }
-
-        if (!basic.password) {
-            this.logger.debug('Error: Password is required for basic auth');
-            throw new Error('Password is required for basic auth');
-        }
+    if (!apiKey) {
+        throw new Error('API key is missing');
     }
 
-    return Promise.resolve(true);
-};
+    // sending a request to the most simple endpoint of the target API
+    const requestOptions = {
+        uri: 'https://petstore.elastic.io/v2/user/me',
+        headers: {
+            'api-key': apiKey
+        },
+        json: true
+    };
+
+    // if the request succeeds, we can assume the api key is valid
+    return request.get(requestOptions);
+}

@@ -1,14 +1,13 @@
-# webhook-component
+# petstore-component-nodejs
+> Petstore Node.js component template for the [elastic.io platform](http://www.elastic.io "elastic.io platform")
 
-> WebHook _component template_ for the [elastic.io platform](https://www.elastic.io "elastic.io platform").
-
-This is an open source component template for sending and receiving [WebHooks](https://en.wikipedia.org/wiki/Webhook) on [elastic.io platform](https://www.elastic.io "elastic.io platform"). You can clone it and change it as you wish. However, **if you plan to deploy it into [elastic.io platform](https://www.elastic.io "elastic.io platform") you must follow sets of instructions to succeed**.
+This is a component template which we commonly refer as **the first step of the development** for creating a component to deploy into our platform. This component comes with a basic architecture which can be used on our platform. You can clone it and use it. However, **if you plan to deploy it into [elastic.io platform](https://www.elastic.io "elastic.io platform") you must follow sets of instructions to succeed**.
 
 ## Before you Begin
 
 Before you can deploy any code into our system **you must be a registered elastic.io platform user**. Please see our home page at [https://www.elastic.io](https://www.elastic.io) to learn how.
 
-> Any attempt to deploy a code into our platform without a registration would fail.
+> Any attempt to deploy a code into our platform without a registration would be rejected.
 
 After the registration and opening of the account you must **[upload your SSH Key](http://go2.elastic.io/manage-ssh-keys)** into our platform.
 
@@ -17,24 +16,23 @@ After the registration and opening of the account you must **[upload your SSH Ke
 ## Getting Started
 
 After registration and uploading of your SSH Key you can proceed to deploy it into our system. At this stage we suggest you to:
-* [Create a team](http://go2.elastic.io/manage-teams) to work on your new component (**required**).
-* [Create a repository](http://go2.elastic.io/manage-repositories) where your new component is going to *reside* inside the team that you have just created. For a simplicity you can name your repository **webhook-component**.
+* [Create a team](http://go2.elastic.io/manage-teams) to work on your new component. This is not required but will be automatically created using random naming by our system so we suggest you name your team accordingly.
+* [Create a repository](http://go2.elastic.io/manage-repositories) where your new component is going to *reside* inside the team that you have just created.
 
 ```bash
-$ git clone https://github.com/elasticio/webhook-component.git webhook-component
+$ git clone https://github.com/elasticio/petstore-component-nodejs.git your-repository
 
-$ cd webhook-component
+$ cd your-repository
 ```
-Now you can edit your version of **webhook** and change according to your needs - that is if you know what you are doing. Or you can just ``PUSH``it into our system to see the process in action:
+Now you can edit your version of **petstore-component-nodejs** component and build your desired component. Or you can just ``PUSH``it into our system to see the process in action:
 
 ```bash
-$ git remote add elasticio your-created-team-name@git.elastic.io:webhook-component.git
+$ git remote add elasticio your-team@git.elastic.io:your-repository.git
 
 $ git push elasticio master
 ```
-Please follow the instruction provided in the [Create a team](http://go2.elastic.io/manage-teams) and [Create a repository](http://go2.elastic.io/manage-repositories) for a success.
+Obviously the naming of your team and repository is entirely up-to you and if you do not put any corresponding naming our system will auto generate it for you but the naming might not entirely correspond to your project requirements.
 
-## Limitations
+## File Structure
 
-1. Maximal possible size for an attachment is 10 MB.
-2. Attachments mechanism does not work with [Local Agent Installation](https://support.elastic.io/support/solutions/articles/14000076461-announcing-the-local-agent-)
+The structure of **petstore-component-nodejs** component is quite flexible. [elastic.io platform](https://www.elastic.io) expects only two files to be present in the main directory. These are the ``component.json`` and ``package.json``. Our documentation on [how to build a component in node.js](https://support.elastic.io/support/solutions/articles/14000027123-how-to-build-a-component-in-node-js) has more about each file and their function.
