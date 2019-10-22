@@ -29,8 +29,7 @@
             "sold": "Sold"
           },
           "prompt": "Select Pet Status"
-        }
-      },
+
       "metadata": {
         "out": "./lib/schemas/getPetsByStatus.out.json"
       }
