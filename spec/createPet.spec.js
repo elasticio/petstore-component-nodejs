@@ -14,6 +14,7 @@ const msg = {
   },
 };
 
+// we use sinon to mock functions such as `emit`, which come from sailor when the code is loaded onto the platform
 const self = {
   emit: sinon.spy(),
 };
