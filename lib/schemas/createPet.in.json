@@ -9,6 +9,7 @@
     "status": {
       "type": "string",
       "required": true,
+      "enum": ["Available", "Pending", "Sold"],
       "title": "Status"
     }
   }

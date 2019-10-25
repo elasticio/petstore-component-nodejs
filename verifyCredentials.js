@@ -1,7 +1,4 @@
-"use strict";
-const request = require('request-promise');
-
-module.exports = verify;
+const MagentoClient = require('./lib/petstoreClient');
 
 /**
  * Executes the verification logic by sending a simple to the Petstore API using the provided apiKey.
@@ -9,26 +6,25 @@ module.exports = verify;
  *
  * @param credentials object to retrieve apiKey from
  *
- * @returns Promise sending HTTP request and resolving its response
+ * @returns boolean of whether or not the request was successful
  */
-function verify(credentials) {
+module.exports = async function verify(credentials) {
+  const { apiKey } = credentials;
 
-    // access the value of the apiKey field defined in credentials section of component.json
-    const apiKey = credentials.apiKey;
+  if (!apiKey) throw new Error('API key is missing');
 
-    if (!apiKey) {
-        throw new Error('API key is missing');
-    }
+  const client = new MagentoClient(this, credentials);
 
+  try {
     // sending a request to the most simple endpoint of the target API
-    const requestOptions = {
-        uri: 'https://petstore.elastic.io/v2/user/me',
-        headers: {
-            'api-key': apiKey
-        },
-        json: true
-    };
+    await client.makeRequest({
+      url: '/user/me',
+      method: 'GET',
+    });
 
     // if the request succeeds, we can assume the api key is valid
-    return request.get(requestOptions);
-}
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
