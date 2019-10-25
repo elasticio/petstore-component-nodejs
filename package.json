@@ -1,6 +1,6 @@
 {
     "name": "@elasticio/petstore-component-nodejs",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
         "test": "mocha spec/. --recursive"
