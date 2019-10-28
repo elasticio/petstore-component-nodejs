@@ -9,7 +9,7 @@
         "label": "API key",
         "required": true,
         "viewClass": "TextFieldWithNoteView",
-        "note": "Please use <b>secret</b> as API key. For more details see <a href='https://petstore.elastic.io/docs/' target='_blank'>Petstore API docs</a>."
+        "note": "Please use <b>elasticio</b> as API key. For more details see <a href='https://petstore.elastic.io/docs/' target='_blank'>Petstore API docs</a>."
       }
     }
   },
