@@ -1,6 +1,6 @@
 {
     "name": "@elasticio/petstore-component-nodejs",
-    "version": "0.1.0",
+    "version": "1.0.1",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
         "test": "exit 0"
@@ -19,7 +19,7 @@
         "@elastic.io/component-commons-library": "0.0.6",
         "chai": "4.2.0",
         "elasticio-node": "0.0.8",
-        "elasticio-sailor-nodejs": "2.5.1",
+        "elasticio-sailor-nodejs": "2.5.4",
         "mocha": "6.2.2",
         "request": "2.88.0",
         "sinon": "7.5.0"
