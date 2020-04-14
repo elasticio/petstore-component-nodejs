@@ -14,6 +14,28 @@
     }
   },
   "triggers": {
+    "getPetsHooks": {
+      "main": "./lib/triggers/getPetsHooks.js",
+      "type": "polling",
+      "title": "Hooks Dirty Test",
+      "description": "Test test",
+      "fields": {
+        "status": {
+          "label": "Pet Status",
+          "required": true,
+          "viewClass": "SelectView",
+          "model": {
+            "available": "Available",
+            "pending": "Pending",
+            "sold": "Sold"
+          },
+          "prompt": "Select Pet Status"
+        }
+      },
+      "metadata": {
+        "out": "./lib/schemas/getPetsByStatus.out.json"
+      }
+    },
     "getPetsByStatus": {
       "main": "./lib/triggers/getPetsByStatus.js",
       "type": "polling",
