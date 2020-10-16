@@ -1,6 +1,6 @@
 {
     "name": "@elasticio/petstore-component-nodejs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
         "test": "exit 0"
@@ -13,7 +13,7 @@
     "license": "BSD-2-Clause",
     "engines": {
         "node": "14"
-   },
+    },
     "dependencies": {
         "@elastic.io/component-commons-library": "1.1.3",
         "chai": "4.2.0",
