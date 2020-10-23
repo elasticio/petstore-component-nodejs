@@ -64,6 +64,14 @@
         "in": "./lib/schemas/createPet.in.json",
         "out": "./lib/schemas/createPet.out.json"
       }
+    },
+    "actionError": {
+      "main": "./lib/actions/actionError.js",
+      "title": "Action throw error",
+      "metadata": {
+        "in": {},
+        "out": {}
+      }
     }
   }
 }
