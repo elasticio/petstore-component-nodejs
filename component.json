@@ -64,6 +64,34 @@
         "in": "./lib/schemas/createPet.in.json",
         "out": "./lib/schemas/createPet.out.json"
       }
+    },
+    "testSelectModel": {
+      "main": "./lib/actions/testSelectModel.js",
+      "title": "Test Select Model",
+      "description": "Creates a pet and adds it to the shop",
+      "fields": {
+        "objectType": {
+          "viewClass": "SelectView",
+          "label": "Object Type",
+          "required": true,
+          "model": {
+            "user": "User",
+            "product": "Product"
+          },
+          "prompt": "Choose an Object Type"
+        },
+        "eventTypes": {
+          "viewClass": "MultiSelectView",
+          "label": "Event types",
+          "required": true,
+          "model": "getEventTypes",
+          "prompt": "Choose an Event Type"
+        }
+      },
+      "metadata": {
+        "in": "./lib/schemas/createPet.in.json",
+        "out": "./lib/schemas/createPet.out.json"
+      }
     }
   }
 }
