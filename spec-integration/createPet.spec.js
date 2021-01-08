@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 const { expect } = require('chai');
 const sinon = require('sinon');
 const action = require('../lib/actions/createPet');
@@ -14,7 +15,8 @@ const msg = {
   },
 };
 
-// we use sinon to mock functions such as `emit`, which come from sailor when the code is loaded onto the platform
+// we use sinon to mock functions such as `emit`,
+// which come from sailor when the code is loaded onto the platform
 const self = {
   emit: sinon.spy(),
 };

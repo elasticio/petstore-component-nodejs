@@ -3,6 +3,7 @@
     "version": "1.0.2",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
+      "pretest": "eslint lib spec-integration verifyCredentials.js --fix",
       "test": "exit 0"
     },
     "repository": {
