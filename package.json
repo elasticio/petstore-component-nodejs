@@ -3,7 +3,7 @@
     "version": "1.0.2",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
-        "test": "exit 0"
+      "test": "exit 0"
     },
     "repository": {
         "type": "git",
@@ -18,13 +18,13 @@
         "@elastic.io/component-commons-library": "1.1.5",
         "chai": "4.2.0",
         "elasticio-node": "0.0.9",
-        "elasticio-sailor-nodejs": "2.6.21",
+        "elasticio-sailor-nodejs": "2.6.23",
         "mocha": "8.2.1",
         "request": "2.88.0",
-        "sinon": "9.2.2"
+        "sinon": "9.2.3"
     },
     "devDependencies": {
-        "eslint": "7.16.0",
+        "eslint": "7.17.0",
         "eslint-config-airbnb-base": "14.2.1",
         "eslint-plugin-import": "2.22.1"
     }
