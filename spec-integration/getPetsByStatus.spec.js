@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const { expect } = require('chai');
 const sinon = require('sinon');
+const logger = require('@elastic.io/component-logger')();
 const trigger = require('../lib/triggers/getPetsByStatus');
 
 const cfg = {
@@ -10,11 +11,12 @@ const cfg = {
 
 const self = {
   emit: sinon.spy(),
+  logger,
 };
 
 describe('Get Pets By Status', () => {
   it('Gets the correct status model', async () => {
-    const statuses = await trigger.getStatusModel.call(this, cfg);
+    const statuses = await trigger.getStatusModel.call(self, cfg);
     expect(statuses).to.deep.equal({ available: 'Available', pending: 'Pending', sold: 'Sold' });
   });
 

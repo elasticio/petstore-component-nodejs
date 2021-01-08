@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 const { expect } = require('chai');
 const sinon = require('sinon');
+const logger = require('@elastic.io/component-logger')();
 const action = require('../lib/actions/createPet');
 
 const cfg = {
@@ -19,6 +20,7 @@ const msg = {
 // which come from sailor when the code is loaded onto the platform
 const self = {
   emit: sinon.spy(),
+  logger,
 };
 
 describe('Get Pets By Status', () => {
