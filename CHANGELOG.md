@@ -1,6 +1,8 @@
 ## 1.0.3 (Jan 15, 2021)
 * Make statuses case-insensitive
 * Update to sailor version 2.6.23
+* Update README documentation
+* Changed petstore password in component.json
 
 ## 1.0.2 (Jan 4, 2021)
 * Update to sailor version 2.6.21
