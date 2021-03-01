@@ -7,7 +7,7 @@
   "credentials": {
     "fields": {
       "auth": {
-        "required": true,
+        "required": false,
         "viewClass": "HTTPAuthView"
       },
       "url": {
