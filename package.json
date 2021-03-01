@@ -16,15 +16,15 @@
     },
     "dependencies": {
         "@elastic.io/component-commons-library": "1.1.5",
-        "chai": "4.2.0",
+        "chai": "4.3.0",
         "elasticio-node": "0.0.9",
-        "elasticio-sailor-nodejs": "2.6.21",
-        "mocha": "8.2.1",
+        "elasticio-sailor-nodejs": "2.6.24",
+        "mocha": "8.3.0",
         "request": "2.88.0",
-        "sinon": "9.2.2"
+        "sinon": "9.2.4"
     },
     "devDependencies": {
-        "eslint": "7.16.0",
+        "eslint": "7.21.0",
         "eslint-config-airbnb-base": "14.2.1",
         "eslint-plugin-import": "2.22.1"
     }
