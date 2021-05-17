@@ -9,8 +9,8 @@
       "apiKey": {
         "label": "API key",
         "required": true,
-        "viewClass": "TextFieldWithNoteView",
-        "note": "Please use <b>secret</b> as API key. For more details see <a href='https://petstore.elastic.io/docs/' target='_blank'>Petstore API docs</a>."
+        "viewClass": "PasswordFieldView",
+        "note": "Please use 'secret' as API key. For more details see Petstore API docs: https://petstore.elastic.io/docs"
       }
     }
   },
