@@ -3,7 +3,7 @@
   "description": "elastic.io component for the Petstore API",
   "docsUrl": "https://github.com/elasticio/petstore-component-nodejs",
   "buildType":"docker",
-  "version": "1.0.3-dev2",
+  "version": "1.0.3-dev3",
   "credentials": {
     "fields": {
       "apiKey": {
@@ -19,7 +19,10 @@
       "main": "./lib/triggers/getPetsByStatus.js",
       "type": "polling",
       "title": "Get Pets By Status (Dynamic Data Example)",
-      "description": "Get pets by status, with the available statuses pulled dynamically from API",
+      "help": {
+        "description": "Get pets by status, with the available statuses pulled dynamically from API",
+        "link": "/components/petstore-nodejs"
+      },
       "fields": {
         "status": {
           "label": "Pet Status",
@@ -37,7 +40,10 @@
       "main": "./lib/triggers/getPetsByStatusWithStaticData.js",
       "type": "polling",
       "title": "Get Pets By Status (Static Data Example)",
-      "description": "Get pets by status, with the available statuses statically typed to the component.json",
+      "help": {
+        "description": "Get pets by status, with the available statuses statically typed to the component.json",
+        "link": "/components/petstore-nodejs"
+      },
       "fields": {
         "status": {
           "label": "Pet Status",
@@ -60,7 +66,10 @@
     "createPet": {
       "main": "./lib/actions/createPet.js",
       "title": "Creates a new pet",
-      "description": "Creates a pet and adds it to the shop",
+      "help": {
+        "description": "Creates a pet and adds it to the shop",
+        "link": "/components/petstore-nodejs"
+      },
       "metadata": {
         "in": "./lib/schemas/createPet.in.json",
         "out": "./lib/schemas/createPet.out.json"
