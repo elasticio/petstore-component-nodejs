@@ -1,6 +1,6 @@
 {
     "name": "@elasticio/petstore-component-nodejs",
-    "version": "1.0.3",
+    "version": "1.0.3-dev1",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
         "pretest": "eslint lib spec-integration verifyCredentials.js --fix",
