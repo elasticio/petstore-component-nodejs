@@ -1,8 +1,9 @@
 {
     "name": "@elasticio/petstore-component-nodejs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
+        "pretest": "eslint lib spec-integration verifyCredentials.js --fix",
         "test": "exit 0"
     },
     "repository": {
@@ -18,13 +19,14 @@
         "@elastic.io/component-commons-library": "1.1.5",
         "chai": "4.2.0",
         "elasticio-node": "0.0.9",
-        "elasticio-sailor-nodejs": "2.6.21",
+        "elasticio-sailor-nodejs": "2.6.24",
         "mocha": "8.2.1",
         "request": "2.88.0",
-        "sinon": "9.2.2"
+        "sinon": "9.2.3"
     },
     "devDependencies": {
-        "eslint": "7.16.0",
+        "@elastic.io/component-logger": "0.0.1",
+        "eslint": "7.17.0",
         "eslint-config-airbnb-base": "14.2.1",
         "eslint-plugin-import": "2.22.1"
     }

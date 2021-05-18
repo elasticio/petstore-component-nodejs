@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 const { expect } = require('chai');
 const PetstoreClient = require('../lib/petstoreClient');
 
