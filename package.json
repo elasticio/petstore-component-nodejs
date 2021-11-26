@@ -1,6 +1,5 @@
 {
     "name": "@elasticio/petstore-component-nodejs",
-    "version": "1.0.3",
     "description": "elastic.io component for the Petstore API",
     "scripts": {
         "pretest": "eslint lib spec-integration verifyCredentials.js --fix",
@@ -19,7 +18,7 @@
         "@elastic.io/component-commons-library": "1.1.5",
         "chai": "4.2.0",
         "elasticio-node": "0.0.9",
-        "elasticio-sailor-nodejs": "2.6.24",
+        "elasticio-sailor-nodejs": "2.6.26",
         "mocha": "8.2.1",
         "request": "2.88.0",
         "sinon": "9.2.3"
