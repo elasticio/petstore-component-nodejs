@@ -1,9 +1,9 @@
 {
   "title": "Petstore API (Node.js)",
+  "version": "1.0.5",
   "description": "elastic.io component for the Petstore API",
   "docsUrl": "https://github.com/elasticio/petstore-component-nodejs",
   "buildType":"docker",
-  "version": "1.0.4",
   "credentials": {
     "fields": {
       "apiKey": {
