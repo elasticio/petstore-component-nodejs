@@ -1,10 +1,6 @@
 module.exports = async function verify(credentials) {
   const { apiKey, tenantId, resourceServerUrl } = credentials;
 
-  if (!apiKey) throw new Error('API key is missing');
-  if (!tenantId) throw new Error('Tenant ID is missing');
-  if (!resourceServerUrl) throw new Error('Resource server URL is missing');
-
   try {
     this.logger.info('The credentials: ', apiKey, tenantId, resourceServerUrl);
     console.log('The credentials: ', apiKey, tenantId, resourceServerUrl);
