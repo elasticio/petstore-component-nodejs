@@ -27,7 +27,7 @@
         "status": {
           "label": "Pet Status",
           "required": true,
-          "viewClass": "SelectView",
+          "viewClass": "MultiSelectView",
           "model": "getStatusModel",
           "prompt": "Select Pet Status"
         }
@@ -48,7 +48,7 @@
         "status": {
           "label": "Pet Status",
           "required": true,
-          "viewClass": "SelectView",
+          "viewClass": "MultiSelectView",
           "model": {
             "available": "Available",
             "pending": "Pending",
