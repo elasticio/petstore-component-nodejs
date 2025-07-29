@@ -1,6 +1,6 @@
 {
   "title": "Petstore API (Node.js) MultiSelectView",
-  "version": "1.0.6-dev1",
+  "version": "1.0.6-dev.2",
   "description": "elastic.io component for the Petstore API",
   "docsUrl": "https://github.com/elasticio/petstore-component-nodejs",
   "buildType":"docker",
@@ -70,10 +70,7 @@
         "description": "Creates a pet and adds it to the shop",
         "link": "/components/petstore-nodejs"
       },
-      "metadata": {
-        "in": "./lib/schemas/createPet.in.json",
-        "out": "./lib/schemas/createPet.out.json"
-      }
+      "dynamicMetadata": true
     }
   }
 }
