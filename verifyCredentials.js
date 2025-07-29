@@ -10,6 +10,13 @@ const MagentoClient = require('./lib/petstoreClient');
  * @returns boolean of whether or not the request was successful
  */
 module.exports = async function verify(credentials) {
+  this.logger.fatal('Hello from FATAL logger');
+  this.logger.error('Hello from ERROR logger');
+  this.logger.warn('Hello from WARN logger');
+  this.logger.info('Hello from INFO logger');
+  this.logger.debug('Hello from DEBUG logger');
+  this.logger.trace('Hello from TRACE logger');
+
   const { apiKey } = credentials;
 
   if (!apiKey) throw new Error('API key is missing');
