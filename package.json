@@ -18,7 +18,7 @@
         "@elastic.io/component-commons-library": "2.0.2",
         "chai": "4.2.0",
         "elasticio-node": "0.0.9",
-        "elasticio-sailor-nodejs": "2.6.27",
+        "elasticio-sailor-nodejs": "2.7.7",
         "mocha": "9.2.2",
         "request": "2.88.0",
         "sinon": "9.2.3"
