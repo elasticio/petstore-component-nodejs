@@ -1,3 +1,7 @@
+## 1.0.6 (November 14, 2025)
+
+* Force the component builds to be dockerized ad pushed to the Docker Hub
+
 ## 1.0.5 (April 08, 2022)
 
 * Update Sailor version to 2.6.27
