@@ -1,6 +1,6 @@
 {
   "title": "Petstore API (Node.js)",
-  "version": "1.0.7-dev.3",
+  "version": "1.0.7-dev.4",
   "description": "elastic.io component for the Petstore API",
   "docsUrl": "https://github.com/elasticio/petstore-component-nodejs",
   "credentials": {
