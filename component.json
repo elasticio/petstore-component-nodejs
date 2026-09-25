@@ -13,11 +13,15 @@
       },
       "requiredFileField": {
         "viewClass": "FileTextView",
+        "accept": ".txt,.crt,.jpg,.png",
+        "maxlength": "5",
         "required": true,
         "label": "Required File Field"
       },
       "optionalFileField": {
         "viewClass": "FileTextView",
+        "accept": ".txt,.crt,.jpg,.png",
+        "maxlength": "5",
         "required": false,
         "label": "Optional File Field"
       }
