@@ -11,24 +11,6 @@
       "required": true,
       "enum": ["Available", "Pending", "Sold"],
       "title": "Status"
-    },
-    "requiredNumberField": {
-          "viewClass": "NumberFieldView",
-          "type":"number",
-          "minValue": 0,
-          "maxValue": 7,
-          "required": true,
-          "title": "Required Number Field from 0 to 7",
-          "placeholder": "100"
-        },
-        "optionalNumberField": {
-          "viewClass": "NumberFieldView",
-          "type":"number",
-          "minValue": 7,
-          "maxValue": 70,
-          "required": false,
-          "title": "Optional Number Field from 7 to 70",
-          "placeholder": "99"
-        }
+    }
   }
 }
