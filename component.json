@@ -1,6 +1,6 @@
 {
   "title": "Petstore API (Node.js) with FileTextView and NumberFieldView",
-  "version": "1.0.7-dev.6",
+  "version": "1.0.7-dev.7",
   "description": "elastic.io component for the Petstore API",
   "docsUrl": "https://github.com/elasticio/petstore-component-nodejs",
   "credentials": {
